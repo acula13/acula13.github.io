@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>DADS 7275 · SpaceX Falcon 9 | Michael Kenealy</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/portfolio-fixes.css?v=3" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+
+		<div id="wrapper">
+
+			<header id="header">
+				<a href="index.html" class="logo">MK Portfolio</a>
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li class="active"><a href="course-dads-7275.html">DADS 7275</a></li>
+					<li><a href="course-dads-6700.html">DADS 6700</a></li>
+					<li><a href="course-dads-6600.html">DADS 6600</a></li>
+					<li><a href="course-dads-6400.html">DADS 6400</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://github.com/acula13" class="icon fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+					<li><a href="mailto:michaelkenealy1@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+				<section class="post">
+					<header class="major">
+						<span class="date"><span class="date-text">DADS 7275 · Data Mining Case Study</span></span>
+						<h1>SpaceX Falcon 9<br />Landing Success Prediction</h1>
+						<p>Predicting first-stage landing success for reusable<br />rocket cost optimization — full supervised workflow.</p>
+					</header>
+
+					<div class="image main"><img src="images/projects/spacex-success-time.png" alt="Landing success rate over time" /></div>
+
+					<h2>Overview</h2>
+					<p>Reusable launch vehicles have transformed the economics of orbital access. This case study applies a complete supervised data mining pipeline to predict binary booster landing success for Falcon 9 missions using historically observed launch characteristics.</p>
+
+					<p>A web-scraped catalog of <strong>557 Falcon 9 launches (2010–2026)</strong> was cleaned, engineered, and explored. The target variable <code>landing_success</code> is strongly imbalanced (~91.2% successful landings). Three classifiers — logistic regression, random forest, and XGBoost — were trained in scikit-learn pipelines with stratified cross-validation, class-imbalance handling, and hyperparameter search.</p>
+
+					<h2>Key results</h2>
+					<ul>
+						<li><strong>XGBoost</strong> achieved the highest cross-validated F1 score (<strong>0.971</strong>) and hold-out F1 of <strong>0.971</strong>, with overall test accuracy of <strong>95%</strong>.</li>
+						<li>Failure-class recall remained limited (0.40 on the test set), highlighting the difficulty of rare-event prediction.</li>
+						<li><strong>SHAP</strong> interpretability identified mission year, landing pad / recovery mode, orbit type, and launch site as influential drivers of predicted landing probability.</li>
+					</ul>
+
+					<div class="image main"><img src="images/projects/spacex-orbit.png" alt="Success rate by orbit" /></div>
+
+					<h2>Methodology</h2>
+					<ol>
+						<li><strong>Data acquisition</strong> — web scraping and catalog assembly of Falcon 9 launches</li>
+						<li><strong>Preprocessing</strong> — cleaning, feature engineering, leakage-aware target definition</li>
+						<li><strong>EDA</strong> — temporal learning curves, orbit/site success rates, payload associations</li>
+						<li><strong>Modeling</strong> — logistic regression, random forest, XGBoost with CV and tuning</li>
+						<li><strong>Interpretability</strong> — SHAP summaries and dependence plots</li>
+					</ol>
+
+					<div class="row">
+						<div class="6u 12u$(small)">
+							<span class="image fit"><img src="images/projects/spacex-payload.png" alt="Payload vs landing success" /></span>
+						</div>
+						<div class="6u$ 12u$(small)">
+							<span class="image fit"><img src="images/projects/spacex-shap.png" alt="SHAP summary plot" /></span>
+						</div>
+					</div>
+
+					<h2>Repository structure</h2>
+					<pre><code>SpaceX Project/
+├── Data/           # raw &amp; processed launch catalogs
+├── Notebooks/      # 01 acquisition → 04 interpretability
+├── Figures/        # EDA and SHAP plots
+├── Models/         # trained pipelines
+└── Report          # final project write-up
+</code></pre>
+
+					<ul class="actions">
+						<li><a href="https://github.com/acula13/spacex-falcon9-landing-prediction" class="button" target="_blank" rel="noopener">View on GitHub</a></li>
+						<li><a href="index.html" class="button">Back Home</a></li>
+					</ul>
+				</section>
+			</div>
+
+			<footer id="footer">
+				<section class="split contact">
+					<section class="alt">
+						<h3>Program</h3>
+						<p>MS Data Analytics Engineering<br />Northeastern University</p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p><a href="mailto:michaelkenealy1@gmail.com">michaelkenealy1@gmail.com</a></p>
+					</section>
+					<section>
+						<h3>GitHub</h3>
+						<p><a href="https://github.com/acula13" target="_blank" rel="noopener">acula13</a></p>
+					</section>
+				</section>
+			</footer>
+
+			<div id="copyright">
+				<ul><li>&copy; Michael Kenealy</li><li>Design: <a href="https://html5up.net">HTML5 UP</a> Massively</li></ul>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
