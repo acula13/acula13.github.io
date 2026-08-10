@@ -4,15 +4,14 @@ Personal portfolio site for Northeastern University MS Data Analytics Engineerin
 
 Built with **[Massively](https://html5up.net/massively)** by HTML5 UP (CCA 3.0).
 
-## Live site
-
-https://acula13.github.io
-
 ## Local preview
 
 ```bash
+cd portfolio-site
 python -m http.server 5500
 ```
+
+Open http://localhost:5500
 
 ## Pages
 
@@ -24,6 +23,10 @@ python -m http.server 5500
 | `course-dads-6600.html` | Visualization labs |
 | `course-dads-6700.html` | Bluegrass Barrel Co database |
 | `course-dads-7275.html` | SpaceX Falcon 9 landing ML |
+
+## GitHub Pages
+
+This site is intended to publish from the `main` branch of `acula13.github.io` (or project Pages from `/` on `main`).
 
 ## License
 
