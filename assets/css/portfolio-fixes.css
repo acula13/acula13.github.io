@@ -1,0 +1,62 @@
+/*
+ * Portfolio overrides for Massively
+ * Decorative lines must never cross major-header date labels.
+ */
+
+header.major > .date:before,
+header.major > .date:after,
+header.major .date:before,
+header.major .date:after,
+#footer header.major .date:before,
+#footer header.major .date:after {
+	content: none !important;
+	display: none !important;
+	border: 0 !important;
+	width: 0 !important;
+	max-width: 0 !important;
+	left: auto !important;
+	right: auto !important;
+	top: auto !important;
+	position: static !important;
+	background: none !important;
+}
+
+header.major > .date {
+	display: block !important;
+	position: relative !important;
+	text-align: center !important;
+	width: 100% !important;
+	line-height: 1.45 !important;
+	overflow: visible !important;
+}
+
+header.major > .date::after {
+	content: "" !important;
+	display: block !important;
+	position: absolute !important;
+	left: 0 !important;
+	right: 0 !important;
+	top: 50% !important;
+	transform: translateY(-50%) !important;
+	width: 100% !important;
+	max-width: none !important;
+	height: 2px !important;
+	border: 0 !important;
+	background-color: #d8d2c8 !important;
+	z-index: 0 !important;
+	pointer-events: none !important;
+}
+
+header.major > .date > .date-text {
+	position: relative !important;
+	z-index: 1 !important;
+	display: inline-block !important;
+	max-width: min(92%, 42rem) !important;
+	padding: 0.2rem 1.5rem !important;
+	margin: 0 auto !important;
+	background-color: #ffffff !important;
+	background-clip: padding-box !important;
+	line-height: 1.45 !important;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+}
