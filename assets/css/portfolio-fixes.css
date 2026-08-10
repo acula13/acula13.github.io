@@ -3,6 +3,7 @@
  * Decorative lines must never cross major-header date labels.
  */
 
+/* Reset the original two-sided absolute lines (template default) */
 header.major > .date:before,
 header.major > .date:after,
 header.major .date:before,
@@ -30,6 +31,7 @@ header.major > .date {
 	overflow: visible !important;
 }
 
+/* Full-width line BEHIND the label */
 header.major > .date::after {
 	content: "" !important;
 	display: block !important;
@@ -42,11 +44,12 @@ header.major > .date::after {
 	max-width: none !important;
 	height: 2px !important;
 	border: 0 !important;
-	background-color: #d8d2c8 !important;
+	background-color: #d8d2c8 !important; /* soft tan line matching the template look */
 	z-index: 0 !important;
 	pointer-events: none !important;
 }
 
+/* Label masks the line with the post background color */
 header.major > .date > .date-text {
 	position: relative !important;
 	z-index: 1 !important;
