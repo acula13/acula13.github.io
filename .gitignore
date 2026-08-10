@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+*.log
+.ipynb_checkpoints/
+_*.py
+PUBLISH.bat
+push_site.py
